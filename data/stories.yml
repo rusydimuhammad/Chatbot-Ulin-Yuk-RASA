@@ -17,12 +17,6 @@ stories:
   - action: utter_wisata
   - intent: choose_kkb
   - action: utter_goodbye
-  - or:
-    - intent: choose_of
-  - action: utter_cheer_up
-  - or:
-    - intent: choose_fwbs
-  - action: utter_did_that_help
 
 - story: sad path 1
   steps:

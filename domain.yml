@@ -1,0 +1,63 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - choose_wisata
+  - choose_kuliner
+  - choose_kkb
+  - choose_of
+  - choose_fwbs
+  - choose_wpb
+  - choose_tk
+
+entities:
+  - name
+
+responses:
+  utter_greet:
+  - text: "Apa tempat yang ingin dikunjungi?"
+    buttons:
+      - title: "Tempat Kuliner"
+        payload: "/choose_kuliner"
+      - title: "Tempat Wisata"
+        payload: "/choose_wisata"
+
+  utter_wisata:
+  - text: "Terdapat beberapa tempat wisata dapat Anda kunjungi"
+    buttons:
+      - title: "Kampung Korea Bandung"
+        payload: "/choose_kkb"
+      - title: "Orchid Forest"
+        payload: "/choose_of"
+      - title: "Forest Walk Babakan Siliwangi"
+        payload: "/choose_fwbs"
+      - title: "Wisata Puncak Bintang"
+        payload: "/choose_wpb"
+      - title: "Tebing Keraton"
+        payload: "/choose_tk"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
